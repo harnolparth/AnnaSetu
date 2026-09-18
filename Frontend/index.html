@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnnaSetu - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <section class="auth">
+        <div class="auth-card">
+            <div class="brand">
+                <div class="logo">A</div>
+                <div>
+                    <h1>AnnaSetu</h1>
+                    <p>Food Donation Management System</p>
+                </div>
+            </div>
+            <div class="tabs"><button class="tab active" id="lt">Login</button><button class="tab"
+                    id="rt">Register</button></div>
+            <form id="login"><label>Email<input id="email" type="email" placeholder="you@example.com"
+                        required></label><label>Password<input id="pass" type="password" placeholder="Enter password"
+                        required></label><label>Login as<select id="lr">
+                        <option value="donor">Donor</option>
+                        <option value="ngo">NGO</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="admin">Admin</option>
+                    </select></label><button class="btn primary full">Login</button></form>
+            <form id="register" class="hidden"><label>Register as<select id="rr">
+                        <option value="donor">Donor</option>
+                        <option value="ngo">NGO</option>
+                        <option value="volunteer">Volunteer</option>
+                    </select></label><label>Name<input id="rn" required></label><label>Email<input id="re" type="email"
+                        required></label><label>Phone<input id="rp" required></label><label>Address<textarea id="ra"
+                        required></textarea></label><label id="dt">Donor type<select id="rd">
+                        <option>Individual</option>
+                        <option>Restaurant</option>
+                        <option>Hotel</option>
+                        <option>Event Organizer</option>
+                        <option>Organization</option>
+                    </select></label><label id="vh" class="hidden">Vehicle<input id="rv"></label><label>Password<input
+                        id="rpass" type="password" minlength="6" required></label><button
+                    class="btn primary full">Create Account</button></form>
+            
+        </div>
+    </section>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

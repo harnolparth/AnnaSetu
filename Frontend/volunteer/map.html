@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnnaSetu - Delivery Map</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="side-brand">
+                <div class="logo">A</div>
+                <div><b>AnnaSetu</b><small id="role"></small></div>
+            </div>
+            <nav class="nav" id="nav"></nav><button class="logout" id="logout">↪ &nbsp; Sign Out</button>
+        </aside>
+        <main class="main">
+            <header class="top">
+                <div>
+                    <h2>Delivery Map</h2>
+                    <p>AnnaSetu · Food Donation Management System</p>
+                </div>
+                <div class="top-user">
+                    <div>
+                        <div class="name" id="topName"></div>
+                        <div class="role-text" id="topRole"></div>
+                    </div>
+                    <div class="avatar" id="avatar">AN</div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="page-intro">
+                    <h1>Delivery Map</h1>
+                    <p>View pickup and NGO locations for your deliveries.</p>
+                </div>
+                <div class="panel">
+                    <div id="map"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/map-location.js"></script>
+    <script src="../js/map.js"></script>
+</body>
+
+</html>

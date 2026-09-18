@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnnaSetu - Volunteer Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="side-brand">
+                <div class="logo">A</div>
+                <div><b>AnnaSetu</b><small id="role"></small></div>
+            </div>
+            <nav class="nav" id="nav"></nav><button class="logout" id="logout">↪ &nbsp; Sign Out</button>
+        </aside>
+        <main class="main">
+            <header class="top">
+                <div>
+                    <h2>Volunteer Dashboard</h2>
+                    <p>AnnaSetu · Food Donation Management System</p>
+                </div>
+                <div class="top-user">
+                    <div>
+                        <div class="name" id="topName"></div>
+                        <div class="role-text" id="topRole"></div>
+                    </div>
+                    <div class="avatar" id="avatar">AN</div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="welcome">
+                    <div>
+                        <h1>Good day, <span id="user"></span>! 👋</h1>
+                        <p>Here is your delivery impact overview.</p>
+                    </div><a class="btn primary" href="available.html">⌕ View Deliveries</a>
+                </div>
+                <div class="grid cards">
+                    <div class="card stat-card">
+                        <div class="stat-icon">▣</div>
+                        <div>
+                            <div class="stat-label">Total Deliveries</div>
+                            <div class="stat" id="volTotal">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">✓</div>
+                        <div>
+                            <div class="stat-label">Completed</div>
+                            <div class="stat" id="volCompleted">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">◷</div>
+                        <div>
+                            <div class="stat-label">In Progress</div>
+                            <div class="stat" id="volProgress">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">◉</div>
+                        <div>
+                            <div class="stat-label">Available Tasks</div>
+                            <div class="stat" id="volAvailable">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">🍽</div>
+                        <div>
+                            <div class="stat-label">Meals Delivered</div>
+                            <div class="stat" id="volMeals">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid two-col">
+                    <div class="panel">
+                        <div class="section-title">
+                            <h3>Recent Deliveries</h3><a class="btn secondary" href="my-deliveries.html">View All</a>
+                        </div>
+                        <div id="recent"></div>
+                    </div>
+                    <div class="panel">
+                        <div class="section-title">
+                            <h3>Platform Reach</h3><span>Community activity</span>
+                        </div>
+                        <div class="reach">
+                            <div class="donut"></div>
+                            <div class="legend"><span><i></i>Deliveries</span><span><i class="light"></i>Other
+                                    activity</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/volunteer.js"></script>
+</body>
+
+</html>

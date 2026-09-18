@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnnaSetu - NGO Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="side-brand">
+                <div class="logo">A</div>
+                <div><b>AnnaSetu</b><small id="role"></small></div>
+            </div>
+            <nav class="nav" id="nav"></nav><button class="logout" id="logout">↪ &nbsp; Sign Out</button>
+        </aside>
+        <main class="main">
+            <header class="top">
+                <div>
+                    <h2>NGO Dashboard</h2>
+                    <p>AnnaSetu · Food Donation Management System</p>
+                </div>
+                <div class="top-user">
+                    <div>
+                        <div class="name" id="topName"></div>
+                        <div class="role-text" id="topRole"></div>
+                    </div>
+                    <div class="avatar" id="avatar">AN</div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="welcome">
+                    <div>
+                        <h1>Good day, <span id="user"></span>! 👋</h1>
+                        <p>Here is your food-access overview.</p>
+                    </div><a class="btn primary" href="available.html">⌕ Browse Donations</a>
+                </div>
+                <div class="grid cards">
+                    <div class="card stat-card">
+                        <div class="stat-icon">◫</div>
+                        <div>
+                            <div class="stat-label">Total Requests</div>
+                            <div class="stat" id="ngoRequests">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">✓</div>
+                        <div>
+                            <div class="stat-label">Accepted</div>
+                            <div class="stat" id="ngoAccepted">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">◷</div>
+                        <div>
+                            <div class="stat-label">Pending</div>
+                            <div class="stat" id="ngoPending">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">🍽</div>
+                        <div>
+                            <div class="stat-label">Available Now</div>
+                            <div class="stat" id="ngoAvailable">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">◉</div>
+                        <div>
+                            <div class="stat-label">Meals Available</div>
+                            <div class="stat" id="ngoMeals">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid two-col">
+                    <div class="panel">
+                        <div class="section-title">
+                            <h3>Recent Requests</h3><a class="btn secondary" href="requests.html">View All</a>
+                        </div>
+                        <div id="recent"></div>
+                    </div>
+                    <div class="panel">
+                        <div class="section-title">
+                            <h3>Platform Reach</h3><span>Community activity</span>
+                        </div>
+                        <div class="reach">
+                            <div class="donut"></div>
+                            <div class="legend"><span><i></i>Requests</span><span><i class="light"></i>Other
+                                    activity</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/ngo.js"></script>
+</body>
+
+</html>

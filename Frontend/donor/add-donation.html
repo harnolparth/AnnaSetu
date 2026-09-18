@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnnaSetu - Donate Food</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="side-brand">
+                <div class="logo">A</div>
+
+                <div>
+                    <b>AnnaSetu</b>
+                    <small id="role"></small>
+                </div>
+            </div>
+
+            <nav class="nav" id="nav"></nav>
+
+            <button class="logout" id="logout">
+                ↪ &nbsp; Sign Out
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Top Header -->
+            <header class="top">
+
+                <div>
+                    <h2>Donate Food</h2>
+                    <p>AnnaSetu · Food Donation Management System</p>
+                </div>
+
+                <div class="top-user">
+
+                    <div>
+                        <div class="name" id="topName"></div>
+                        <div class="role-text" id="topRole"></div>
+                    </div>
+
+                    <div class="avatar" id="avatar">
+                        AN
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Page Content -->
+            <section class="content">
+
+                <div class="page-intro">
+
+                    <h1>Share Surplus Food</h1>
+
+                    <p>
+                        Post surplus food so nearby NGOs can request pickup.
+                        Every donation counts.
+                    </p>
+
+                </div>
+
+
+                <!-- Donation Form -->
+                <div class="panel form-card">
+
+                    <form id="f">
+
+                        <div class="form-grid">
+
+                            <!-- Food Name -->
+                            <label>
+                                Food name
+
+                                <input
+                                    name="food_name"
+                                    type="text"
+                                    placeholder="e.g. Rice and dal"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Food Type -->
+                            <label>
+                                Food type
+
+                                <select name="food_type" required>
+
+                                    <option value="Cooked Food">
+                                        Cooked Food
+                                    </option>
+
+                                    <option value="Packaged Food">
+                                        Packaged Food
+                                    </option>
+
+                                    <option value="Bakery">
+                                        Bakery
+                                    </option>
+
+                                    <option value="Fruits & Vegetables">
+                                        Fruits & Vegetables
+                                    </option>
+
+                                </select>
+                            </label>
+
+
+                            <!-- Quantity -->
+                            <label>
+                                Quantity
+
+                                <input
+                                    name="quantity"
+                                    type="number"
+                                    min="1"
+                                    placeholder="e.g. 20"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Number of Meals -->
+                            <label>
+                                Number of meals
+
+                                <input
+                                    name="no_of_meals"
+                                    type="number"
+                                    min="1"
+                                    placeholder="e.g. 20"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Available From -->
+                            <label>
+                                Available from
+
+                                <input
+                                    name="available_from"
+                                    type="datetime-local"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Available Until -->
+                            <label>
+                                Available until
+
+                                <input
+                                    name="available_until"
+                                    type="datetime-local"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Expiry Date -->
+                            <label>
+                                Expiry date
+
+                                <input
+                                    name="expiry_date"
+                                    type="datetime-local"
+                                    required
+                                >
+                            </label>
+
+
+                            <!-- Pickup Address -->
+                            <label class="full-col">
+                                Pickup address
+
+                                <textarea
+                                    name="pickup_address"
+                                    id="pickup_address"
+                                    rows="3"
+                                    placeholder="Enter pickup address"
+                                    required
+                                ></textarea>
+
+                                <button
+                                    type="button"
+                                    class="btn secondary location-btn"
+                                    id="useLocationBtn"
+                                >
+                                    📍 Use My Location
+                                </button>
+
+                                <small id="locationStatus"></small>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Submit -->
+                        <button
+                            class="btn primary"
+                            type="submit"
+                        >
+                            Publish Donation
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/donor.js"></script>
+
+</body>
+
+</html>

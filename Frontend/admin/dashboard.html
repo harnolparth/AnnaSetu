@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnnaSetu - Admin Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="side-brand">
+                <div class="logo">A</div>
+                <div><b>AnnaSetu</b><small id="role"></small></div>
+            </div>
+            <nav class="nav" id="nav"></nav><button class="logout" id="logout">↪ &nbsp; Sign Out</button>
+        </aside>
+        <main class="main">
+            <header class="top">
+                <div>
+                    <h2>Admin Dashboard</h2>
+                    <p>AnnaSetu · Food Donation Management System</p>
+                </div>
+                <div class="top-user">
+                    <div>
+                        <div class="name" id="topName"></div>
+                        <div class="role-text" id="topRole"></div>
+                    </div>
+                    <div class="avatar" id="avatar">AN</div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="welcome">
+                    <div>
+                        <h1>System Overview</h1>
+                        <p>Monitor users, donations, requests and deliveries across AnnaSetu.</p>
+                    </div><a class="btn primary" href="statistics.html">▥ View Statistics</a>
+                </div>
+                <div class="grid cards">
+                    <div class="card stat-card">
+                        <div class="stat-icon">♙</div>
+                        <div>
+                            <div class="stat-label">Donors</div>
+                            <div class="stat" id="adminDonors">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">🏢</div>
+                        <div>
+                            <div class="stat-label">NGOs</div>
+                            <div class="stat" id="adminNgos">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">🚲</div>
+                        <div>
+                            <div class="stat-label">Volunteers</div>
+                            <div class="stat" id="adminVolunteers">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">◫</div>
+                        <div>
+                            <div class="stat-label">Donations</div>
+                            <div class="stat" id="adminDonations">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">▣</div>
+                        <div>
+                            <div class="stat-label">Requests</div>
+                            <div class="stat" id="adminRequests">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">↗</div>
+                        <div>
+                            <div class="stat-label">Deliveries</div>
+                            <div class="stat" id="adminDeliveries">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">✓</div>
+                        <div>
+                            <div class="stat-label">Completed</div>
+                            <div class="stat" id="adminCompleted">0</div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon">🍽</div>
+                        <div>
+                            <div class="stat-label">Available Donations</div>
+                            <div class="stat" id="adminAvailable">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid two-col">
+                    <div class="panel">
+                        <div class="section-title">
+                            <h3>Admin Controls</h3>
+                        </div>
+                        <div class="grid" style="grid-template-columns:repeat(2,1fr)"><a class="card"
+                                href="users.html"><b>Manage Users</b>
+                                <p class="muted">View registered donors, NGOs and volunteers.</p>
+                            </a><a class="card" href="statistics.html"><b>Statistics</b>
+                                <p class="muted">Review platform counts and charts.</p>
+                            </a></div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
